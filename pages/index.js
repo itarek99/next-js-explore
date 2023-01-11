@@ -1,11 +1,12 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -25,28 +26,24 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <Link href=''>
-          <h2>Events In London</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quo doloribus earum ea, aliquam, labore
-            architecto beatae at quidem provident corrupti ducimus iusto hic consequatur?
-          </p>
-        </Link>
-        <Link href=''>
-          <h2>Events In San Francisco</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quo doloribus earum ea, aliquam, labore
-            architecto beatae at quidem provident corrupti ducimus iusto hic consequatur?
-          </p>
-        </Link>
-        <Link href=''>
-          <h2>Events In Barcelona</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quo doloribus earum ea, aliquam, labore
-            architecto beatae at quidem provident corrupti ducimus iusto hic consequatur?
-          </p>
-        </Link>
+        {data.map((event) => (
+          <Link key={event.id} href={`/events/${event.id}`}>
+            <Image width='200' height={'100'} src={event.image} alt={event.title} />
+            <h2>{event.title}</h2>
+            <p>{event.description}</p>
+          </Link>
+        ))}
       </main>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const { events_categories } = await import('/data/data.json');
+
+  return {
+    props: {
+      data: events_categories,
+    },
+  };
 }

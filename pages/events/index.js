@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-const AllEvents = ({ title }) => {
+const AllEvents = () => {
   return (
     <div>
       <h1>All Events</h1>
       <div>
         <Link href=''>
-          <h2>Events In {title}</h2>
+          <h2>Events In Dhaka</h2>
         </Link>
         <Link href=''>
           <h2>Events In San Francisco</h2>
@@ -19,11 +19,3 @@ const AllEvents = ({ title }) => {
   );
 };
 export default AllEvents;
-
-export function getServerSideProps() {
-  return {
-    props: {
-      title: 'Hello World',
-    },
-  };
-}

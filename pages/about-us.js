@@ -1,7 +1,7 @@
-const Page = () => {
+const AboutUs = () => {
   return (
     <div>
-      <h1>About Us Page</h1>
+      <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptas similique, beatae dolorem aliquam
         veritatis molestias, doloribus sint nihil totam autem dicta temporibus excepturi quaerat maxime iusto magnam.
@@ -11,4 +11,4 @@ const Page = () => {
     </div>
   );
 };
-export default Page;
+export default AboutUs;
