@@ -1,13 +1,45 @@
 import Link from 'next/link';
 
-const EventsCategory = () => {
+const EventCity = ({ data }) => {
   return (
     <div>
-      <h1>Events Category</h1>
-      <Link href='/events/e1'>Event 1</Link>
-      <Link href='/events/e2'>Event 2</Link>
-      <Link href='/events/e3'>Event 3</Link>
+      <h1>Events City </h1>
+
+      {data.map((item) => (
+        <Link key={item.id} href='/events/e1'>
+          {item.title}
+        </Link>
+      ))}
     </div>
   );
 };
-export default EventsCategory;
+export default EventCity;
+
+export async function getStaticPaths() {
+  const { events_categories } = await import('/data/data.json');
+  const allPaths = events_categories.map((event) => {
+    return {
+      params: {
+        category: event.id.toString(),
+      },
+    };
+  });
+
+  return {
+    paths: allPaths,
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async (context) => {
+  const { allEvents } = await import('/data/data.json');
+
+  const id = context?.params?.category;
+  const data = allEvents.filter((event) => event.city === id);
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
