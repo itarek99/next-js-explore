@@ -33,7 +33,7 @@
       "title": "Hyde Park Winter Wonderland",
       "city": "london",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
-      "image": "https://hydeparkwinterwonderland.com/static/252d7fe6693a6a8b1887bd2049204103/039f7/2021-503x503-3.webp",
+      "image": "https://images.unsplash.com/photo-1578935899317-0c01f10e987a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
       "emails_registered": []
     },
     {
@@ -101,8 +101,8 @@
       "emails_registered": []
     },
     {
-      "id": "concert-christian-löffler-+-detect-ensemble",
-      "title": "Concert Christian Löffler + Detect Ensemble",
+      "id": "concert-christian-löffler-detect-ensemble",
+      "title": "Concert Christian Löffler Detect Ensemble",
       "city": "barcelona",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
       "image": "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",

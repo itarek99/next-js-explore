@@ -28,7 +28,7 @@ export default function Home({ data }) {
       <main className={styles.main}>
         {data.map((event) => (
           <Link key={event.id} href={`/events/${event.id}`}>
-            <Image width='200' height={'100'} src={event.image} alt={event.title} />
+            <Image width='100' height={'100'} src={event.image} alt={event.title} />
             <h2>{event.title}</h2>
             <p>{event.description}</p>
           </Link>

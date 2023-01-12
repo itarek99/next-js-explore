@@ -1,13 +1,15 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-const EventCity = ({ data }) => {
+const EventCity = ({ data, cityName }) => {
   return (
     <div>
-      <h1>Events City </h1>
+      <h1>Events {cityName}</h1>
 
       {data.map((item) => (
-        <Link key={item.id} href='/events/e1'>
-          {item.title}
+        <Link key={item.id} href={`/events/${item.city}/${item.id}`}>
+          <Image src={item.image} alt={item.title} height='100' width='100' />
+          <h2>{item.title}</h2>
         </Link>
       ))}
     </div>
@@ -40,6 +42,7 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       data,
+      cityName: id,
     },
   };
 };
