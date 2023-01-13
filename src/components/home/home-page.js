@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const HomePage = ({ data }) => {
   return (
-    <main>
+    <main className='container'>
       {data.map((event) => (
         <Link key={event.id} href={`/events/${event.id}`}>
           <Image width='100' height={'100'} src={event.image} alt={event.title} />
