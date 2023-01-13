@@ -3,11 +3,19 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header>
-      <nav>
-        <div>Logo</div>
-        <Link href='/'>Home</Link>
-        <Link href='/events'>Events</Link>
-        <Link href='/about-us'>About</Link>
+      <nav className='navbar'>
+        <div className='navbar__logo'>Next Explore</div>
+        <div className='navbar__items'>
+          <Link className='navbar__item' href='/'>
+            Home
+          </Link>
+          <Link className='navbar__item' href='/events'>
+            Events
+          </Link>
+          <Link className='navbar__item' href='/about-us'>
+            About
+          </Link>
+        </div>
       </nav>
     </header>
   );
