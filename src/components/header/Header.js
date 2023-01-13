@@ -5,7 +5,10 @@ const Header = () => {
     <header>
       <div className='container'>
         <nav className='navbar '>
-          <div className='navbar__logo'>Next Explore</div>
+          <Link className='navbar__logo' href='/'>
+            Next Explore
+          </Link>
+
           <div className='navbar__items'>
             <Link className='navbar__item' href='/'>
               Home
