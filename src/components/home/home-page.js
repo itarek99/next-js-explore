@@ -5,10 +5,14 @@ const HomePage = ({ data }) => {
   return (
     <div className='home__items'>
       {data.map((event) => (
-        <Link key={event.id} href={`/events/${event.id}`}>
-          <Image width='100' height={'100'} src={event.image} alt={event.title} />
-          <h2>{event.title}</h2>
-          <p>{event.description}</p>
+        <Link className='card' key={event.id} href={`/events/${event.id}`}>
+          <div className='card__image'>
+            <Image width='240' height='240' src={event.image} alt={event.title} />
+          </div>
+          <div className='card__body'>
+            <h2 className='card__title'>{event.title}</h2>
+            <p className='card__text'>{event.description}</p>
+          </div>
         </Link>
       ))}
     </div>
