@@ -2,6 +2,8 @@
 
 :root {
   --color-primary: #104890;
+  --color-dark: #222;
+  --color-text: #444;
 }
 
 * {
@@ -110,10 +112,24 @@ footer {
 
 .card__title {
   text-decoration: none;
-  color: #222;
+  color: var(--color-dark);
   margin-bottom: 0.3rem;
 }
 
 .card__text {
-  color: #444;
+  color: var(--color-text);
+}
+
+.about-us {
+  margin-top: 3rem;
+}
+
+.about-us__title {
+  color: var(--color-dark);
+  font-size: 2.5rem;
+}
+
+.about-us__text {
+  color: var(--color-text);
+  margin-top: 1rem;
 }
