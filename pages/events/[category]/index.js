@@ -9,7 +9,9 @@ const EventCity = ({ data, cityName }) => {
       <div className='event-city__items'>
         {data.map((item) => (
           <Link className='event-city__item' key={item.id} href={`/events/${item.city}/${item.id}`}>
-            <Image src={item.image} alt={item.title} height='150' width='150' />
+            <div>
+              <Image src={item.image} alt={item.title} height='150' width='150' />
+            </div>
             <h2>{item.title}</h2>
           </Link>
         ))}

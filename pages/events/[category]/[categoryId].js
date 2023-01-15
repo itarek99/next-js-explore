@@ -2,10 +2,14 @@ import Image from 'next/image';
 
 const London = ({ data }) => {
   return (
-    <div>
-      <Image src={data.image} height='300' width='300' alt={data.title} />
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
+    <div className='single-event'>
+      <div>
+        <Image className='card__img' src={data.image} height='350' width='400' alt={data.title} />
+      </div>
+      <div className='single-event__text'>
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+      </div>
     </div>
   );
 };
