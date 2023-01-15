@@ -1,22 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import AllEvent from '../../src/components/events/event-page';
 
-const AllEvents = ({ data }) => {
-  return (
-    <div>
-      <h1>All Events</h1>
-      <div>
-        {data.map((event) => (
-          <Link key={event.id} href={`/events/${event.id}`}>
-            <Image height='100' width='100' src={event.image} alt={event.title} />
-            <h2>{event.title}</h2>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
+const AllEventsPage = ({ data }) => {
+  return <AllEvent data={data} />;
 };
-export default AllEvents;
+export default AllEventsPage;
 
 export async function getServerSideProps() {
   const { events_categories } = await import('/data/data.json');

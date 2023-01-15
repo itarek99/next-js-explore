@@ -124,12 +124,43 @@ footer {
   margin-top: 3rem;
 }
 
-.about-us__title {
+.about-us__title,
+.all-events__title {
   color: var(--color-dark);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 .about-us__text {
   color: var(--color-text);
   margin-top: 1rem;
+}
+
+.all-events {
+  margin-block: 3rem;
+}
+
+.all-events__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.all-events__card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.all-events__card:hover {
+  transform: translateY(-6px);
+}
+
+.all-events__card h2 {
+  position: absolute;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 2px 2px 8px var(--color-dark);
 }
