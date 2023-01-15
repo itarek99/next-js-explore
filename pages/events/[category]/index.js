@@ -3,15 +3,17 @@ import Link from 'next/link';
 
 const EventCity = ({ data, cityName }) => {
   return (
-    <div>
-      <h1>Events {cityName}</h1>
+    <div className='event-city'>
+      <h1 className='event-city__title'>Events {cityName}</h1>
 
-      {data.map((item) => (
-        <Link key={item.id} href={`/events/${item.city}/${item.id}`}>
-          <Image src={item.image} alt={item.title} height='100' width='100' />
-          <h2>{item.title}</h2>
-        </Link>
-      ))}
+      <div className='event-city__items'>
+        {data.map((item) => (
+          <Link className='event-city__item' key={item.id} href={`/events/${item.city}/${item.id}`}>
+            <Image src={item.image} alt={item.title} height='150' width='150' />
+            <h2>{item.title}</h2>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

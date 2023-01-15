@@ -164,3 +164,39 @@ footer {
   padding: 1rem;
   text-shadow: 2px 2px 8px var(--color-dark);
 }
+
+/* all event in city styles */
+
+.event-city {
+  margin-block: 3rem;
+}
+
+.event-city__title {
+  text-transform: capitalize;
+}
+
+.event-city__items {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.event-city__item {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 15px 0px rgba(16, 72, 144, 0.1);
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.event-city__item:hover {
+  box-shadow: 0px 3px 15px 0px rgba(16, 72, 144, 0.2);
+}
+
+.event-city__item h2 {
+  padding-inline: 1rem;
+  font-size: 1.25rem;
+
+  color: var(--color-dark);
+}
