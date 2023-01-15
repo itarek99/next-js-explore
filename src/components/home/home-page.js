@@ -7,7 +7,7 @@ const HomePage = ({ data }) => {
       {data.map((event) => (
         <Link className='card' key={event.id} href={`/events/${event.id}`}>
           <div className='card__image'>
-            <Image width='240' height='240' src={event.image} alt={event.title} />
+            <Image width='280' height='280' src={event.image} alt={event.title} />
           </div>
           <div className='card__body'>
             <h2 className='card__title'>{event.title}</h2>
